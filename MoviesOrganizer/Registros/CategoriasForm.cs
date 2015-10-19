@@ -22,8 +22,6 @@ namespace MoviesOrganizer.Registros
 
             categoria.Descripcion = DescripciontextBox.Text;
 
-
-            //HACER UN CICLO PARA RECORER EL LISTBOX PELICULA.AgregarAutor()
             
             categoria.Insertar();
         }
