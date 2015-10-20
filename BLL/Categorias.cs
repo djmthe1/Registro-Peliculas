@@ -17,7 +17,7 @@ namespace BLL
             this.CategoriaId = 0;
             this.Descripcion = "";
         }
-         
+        
         public Categorias(int categoriaid, string descripcion)
         {
             this.CategoriaId = categoriaid;
