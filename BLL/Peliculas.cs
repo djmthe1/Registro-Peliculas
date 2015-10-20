@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using DAL;
 
 namespace BLL
 {
-    class Peliculas: ClaseMaestra
+    class Peliculas : ClaseMaestra
 
     {
 
@@ -18,29 +19,34 @@ namespace BLL
         public int IMDB { get; set; }
         public int CategoriaId { get; set; }
 
-
-        public List<Autor> Autores { get; set; }
-
         public Peliculas()
         {
-            Autores = new List<Autor>();
-
+            this.PeliculaId = 0;
+            this.Titulo = "";
+            this.Descripcion = "";
+            this.Ano = 0;
+            this.Calificacion = 0;
+            this.IMDB = 0;
+            this.CategoriaId = 0;
         }
 
-        public void AgregarAutor(int AutorId,string Nombres)
+        public Peliculas(int peliculaId, string titulo, string descripcion, int ano, int calificacion, int imdb, int categoriaId)
         {
-            this.Autores.Add(new Autor(AutorId, Nombres));
+            this.PeliculaId = peliculaId;
+            this.Titulo = titulo;
+            this.Descripcion = descripcion;
+            this.Ano = ano;
+            this.Calificacion = calificacion;
+            this.IMDB = imdb;
+            this.CategoriaId = categoriaId;
         }
 
         public override bool Insertar()
         {
-
-
-            foreach (var autor in this.Autores)
-            {
-                //Insert into PeliculasAutores() Values() ,autor.id,autor.nombres
-            }
-            return true;
+            bool retorno = false;
+            ConexionDb conexion = new ConexionDb();
+            conexion.Ejecutar(String.Format("Insert into RegistroPelicula(Titulo, Descripcion, Ano, Calificacion, IMDB, CategoriaId) Values ('{0}','{1}',{2},{3},{4},{5})", this.Titulo, this.Descripcion, this.Ano, this.Calificacion, this.IMDB, this.CategoriaId));
+            return retorno;
         }
 
         public override bool Editar()

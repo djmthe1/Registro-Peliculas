@@ -28,63 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.DescripciontextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.botonGuardar = new System.Windows.Forms.Button();
+            this.Descripcionlabel = new System.Windows.Forms.Label();
+            this.botonNuevo = new System.Windows.Forms.Button();
+            this.botonEliminar = new System.Windows.Forms.Button();
+            this.botonAgregar = new System.Windows.Forms.Button();
+            this.IDlabel = new System.Windows.Forms.Label();
             this.CategoriaIDtextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Guardarbutton
+            // botonGuardar
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(114, 153);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(75, 23);
-            this.Guardarbutton.TabIndex = 0;
-            this.Guardarbutton.Text = "Guardar";
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            this.Guardarbutton.Click += new System.EventHandler(this.button1_Click);
+            this.botonGuardar.Location = new System.Drawing.Point(107, 228);
+            this.botonGuardar.Name = "botonGuardar";
+            this.botonGuardar.Size = new System.Drawing.Size(75, 23);
+            this.botonGuardar.TabIndex = 0;
+            this.botonGuardar.Text = "Guardar";
+            this.botonGuardar.UseVisualStyleBackColor = true;
+            this.botonGuardar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // DescripciontextBox
+            // Descripcionlabel
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(98, 75);
-            this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(156, 20);
-            this.DescripciontextBox.TabIndex = 1;
+            this.Descripcionlabel.AutoSize = true;
+            this.Descripcionlabel.Location = new System.Drawing.Point(34, 102);
+            this.Descripcionlabel.Name = "Descripcionlabel";
+            this.Descripcionlabel.Size = new System.Drawing.Size(63, 13);
+            this.Descripcionlabel.TabIndex = 2;
+            this.Descripcionlabel.Text = "Descripcion";
             // 
-            // label1
+            // botonNuevo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Descripcion";
+            this.botonNuevo.Location = new System.Drawing.Point(12, 228);
+            this.botonNuevo.Name = "botonNuevo";
+            this.botonNuevo.Size = new System.Drawing.Size(75, 23);
+            this.botonNuevo.TabIndex = 0;
+            this.botonNuevo.Text = "Nuevo";
+            this.botonNuevo.UseVisualStyleBackColor = true;
+            this.botonNuevo.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // botonEliminar
             // 
-            this.button1.Location = new System.Drawing.Point(33, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.botonEliminar.Location = new System.Drawing.Point(197, 228);
+            this.botonEliminar.Name = "botonEliminar";
+            this.botonEliminar.Size = new System.Drawing.Size(75, 23);
+            this.botonEliminar.TabIndex = 0;
+            this.botonEliminar.Text = "Eliminar";
+            this.botonEliminar.UseVisualStyleBackColor = true;
+            this.botonEliminar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // botonAgregar
             // 
-            this.button2.Location = new System.Drawing.Point(195, 153);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.botonAgregar.Location = new System.Drawing.Point(74, 176);
+            this.botonAgregar.Name = "botonAgregar";
+            this.botonAgregar.Size = new System.Drawing.Size(75, 23);
+            this.botonAgregar.TabIndex = 0;
+            this.botonAgregar.Text = "Agregar";
+            this.botonAgregar.UseVisualStyleBackColor = true;
+            this.botonAgregar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // IDlabel
+            // 
+            this.IDlabel.AutoSize = true;
+            this.IDlabel.Location = new System.Drawing.Point(34, 40);
+            this.IDlabel.Name = "IDlabel";
+            this.IDlabel.Size = new System.Drawing.Size(16, 13);
+            this.IDlabel.TabIndex = 2;
+            this.IDlabel.Text = "Id";
+            this.IDlabel.Click += new System.EventHandler(this.IDlabel_Click);
             // 
             // CategoriaIDtextBox
             // 
@@ -94,58 +105,29 @@
             this.CategoriaIDtextBox.TabIndex = 1;
             this.CategoriaIDtextBox.Validated += new System.EventHandler(this.textBox1_Validated);
             // 
-            // label2
+            // DescripciontextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Id";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(28, 225);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(28, 252);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(202, 121);
-            this.listBox1.TabIndex = 4;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(155, 225);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Agregar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
+            this.DescripciontextBox.Location = new System.Drawing.Point(107, 95);
+            this.DescripciontextBox.Name = "DescripciontextBox";
+            this.DescripciontextBox.Size = new System.Drawing.Size(156, 20);
+            this.DescripciontextBox.TabIndex = 1;
             // 
             // CategoriasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 411);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(284, 263);
+            this.Controls.Add(this.IDlabel);
+            this.Controls.Add(this.Descripcionlabel);
             this.Controls.Add(this.CategoriaIDtextBox);
             this.Controls.Add(this.DescripciontextBox);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.Guardarbutton);
+            this.Controls.Add(this.botonNuevo);
+            this.Controls.Add(this.botonAgregar);
+            this.Controls.Add(this.botonEliminar);
+            this.Controls.Add(this.botonGuardar);
             this.Name = "CategoriasForm";
             this.Text = "Categorias";
+            this.Load += new System.EventHandler(this.CategoriasForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,15 +135,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Guardarbutton;
-        private System.Windows.Forms.TextBox DescripciontextBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button botonGuardar;
+        private System.Windows.Forms.Label Descripcionlabel;
+        private System.Windows.Forms.Button botonNuevo;
+        private System.Windows.Forms.Button botonEliminar;
+        private System.Windows.Forms.Button botonAgregar;
+        private System.Windows.Forms.Label IDlabel;
         private System.Windows.Forms.TextBox CategoriaIDtextBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox DescripciontextBox;
     }
 }

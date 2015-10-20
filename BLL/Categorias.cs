@@ -18,25 +18,19 @@ namespace BLL
             this.Descripcion = "";
         }
 
-        public Categorias(int id, string descripcion)
+        public Categorias(int categoriaid, string descripcion)
         {
-            this.CategoriaId = id;
+            this.CategoriaId = categoriaid;
             this.Descripcion = descripcion;
         }
-
 
         public override bool Insertar()
         {
             bool retorno = false;
-
             ConexionDb conexion = new ConexionDb();
-
             conexion.Ejecutar(String.Format("Insert Into Categorias (Descripcion) Values('{0}')", this.Descripcion));
-
             return retorno;
-
         }
-
 
         public override bool Editar()
         {

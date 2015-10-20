@@ -7,29 +7,25 @@ using DAL;
 
 namespace BLL
 {
-    class Autor : ClaseMaestra
+    class Generos : ClaseMaestra
     {
-        public int AutorId { get; set; }
-        public string Nombre { get; set; }
 
-        public Autor()
-        {
-            this.AutorId = 0;
-            this.Nombre = "";
-        }
+        public int GeneroId { get; set; }
+        public string Descripcion { get; set; }
 
-        public Autor(int autorId, string nombre)
+        public Generos()
         {
-            this.AutorId = autorId;
-            this.Nombre = nombre;
+            this.GeneroId = 0;
+            this.Descripcion = "";
         }
 
         public override bool Insertar()
         {
             bool retorno = false;
             ConexionDb conexion = new ConexionDb();
-            conexion.Ejecutar(String.Format("Insert Into Autores (Nombre) Values('{0}')", this.Nombre));
+            conexion.Ejecutar(String.Format("Insert Into Categorias (Descripcion) Values('{0}')", this.Descripcion));
             return retorno;
+
         }
 
         public override bool Editar()
