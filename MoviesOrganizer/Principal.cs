@@ -20,5 +20,20 @@ namespace MoviesOrganizer
         {
 
         }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botonSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

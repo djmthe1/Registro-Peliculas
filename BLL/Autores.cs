@@ -7,18 +7,18 @@ using DAL;
 
 namespace BLL
 {
-    class Autor : ClaseMaestra
+    class Autores : ClaseMaestra
     {
         public int AutorId { get; set; }
         public string Nombre { get; set; }
 
-        public Autor()
+        public Autores()
         {
             this.AutorId = 0;
             this.Nombre = "";
         }
 
-        public Autor(int autorId, string nombre)
+        public Autores(int autorId, string nombre)
         {
             this.AutorId = autorId;
             this.Nombre = nombre;

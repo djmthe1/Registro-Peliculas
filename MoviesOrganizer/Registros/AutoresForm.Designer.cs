@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AutoresForm));
             this.IDlabel = new System.Windows.Forms.Label();
             this.ActoresIDtextBox = new System.Windows.Forms.TextBox();
             this.Descripcionlabel = new System.Windows.Forms.Label();
@@ -110,6 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(288, 262);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonGuardar);
@@ -120,7 +122,7 @@
             this.Controls.Add(this.ActoresIDtextBox);
             this.Controls.Add(this.IDlabel);
             this.Name = "AutoresForm";
-            this.Text = "AutoresForm";
+            this.Text = "Autores";
             this.ResumeLayout(false);
             this.PerformLayout();
 

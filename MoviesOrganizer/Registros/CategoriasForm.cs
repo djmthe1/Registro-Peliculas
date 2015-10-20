@@ -49,5 +49,10 @@ namespace MoviesOrganizer.Registros
         {
 
         }
+
+        private void CategoriaIDtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

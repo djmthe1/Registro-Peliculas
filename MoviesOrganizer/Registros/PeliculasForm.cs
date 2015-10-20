@@ -15,5 +15,10 @@ namespace MoviesOrganizer.Registros
         {
             InitializeComponent();
         }
+
+        private void botonNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriasForm));
             this.botonGuardar = new System.Windows.Forms.Button();
             this.Descripcionlabel = new System.Windows.Forms.Label();
             this.botonNuevo = new System.Windows.Forms.Button();
@@ -99,10 +100,11 @@
             // 
             // CategoriaIDtextBox
             // 
-            this.CategoriaIDtextBox.Location = new System.Drawing.Point(98, 37);
+            this.CategoriaIDtextBox.Location = new System.Drawing.Point(107, 40);
             this.CategoriaIDtextBox.Name = "CategoriaIDtextBox";
             this.CategoriaIDtextBox.Size = new System.Drawing.Size(51, 20);
             this.CategoriaIDtextBox.TabIndex = 1;
+            this.CategoriaIDtextBox.TextChanged += new System.EventHandler(this.CategoriaIDtextBox_TextChanged);
             this.CategoriaIDtextBox.Validated += new System.EventHandler(this.textBox1_Validated);
             // 
             // DescripciontextBox
@@ -116,6 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(284, 263);
             this.Controls.Add(this.IDlabel);
             this.Controls.Add(this.Descripcionlabel);

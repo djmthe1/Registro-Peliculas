@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActoresForm));
             this.botonNuevo = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
@@ -111,6 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(289, 262);
             this.Controls.Add(this.Descripcionlabel);
             this.Controls.Add(this.botonAgregar);
@@ -121,7 +123,7 @@
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.botonNuevo);
             this.Name = "ActoresForm";
-            this.Text = "ActoresForm";
+            this.Text = "Actores";
             this.ResumeLayout(false);
             this.PerformLayout();
 

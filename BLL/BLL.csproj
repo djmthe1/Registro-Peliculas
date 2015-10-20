@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actores.cs" />
-    <Compile Include="Autor.cs" />
+    <Compile Include="Autores.cs" />
     <Compile Include="Categorias.cs" />
     <Compile Include="ClaseMaestra.cs" />
     <Compile Include="Generos.cs" />
