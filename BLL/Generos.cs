@@ -23,14 +23,18 @@ namespace BLL
         {
             bool retorno = false;
             ConexionDb conexion = new ConexionDb();
-            conexion.Ejecutar(String.Format("Insert Into Categorias (Descripcion) Values('{0}')", this.Descripcion));
+            retorno=conexion.Ejecutar(String.Format("Insert Into Categorias (Descripcion) Values('{0}')", this.Descripcion));
             return retorno;
 
         }
 
         public override bool Editar()
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+            ConexionDb conexion = new ConexionDb();
+            retorno=conexion.Ejecutar(String.Format("Update Into Categorias (Descripcion) Values('{0}')", this.Descripcion));
+            return retorno;
+
         }
 
         public override bool Eliminar()

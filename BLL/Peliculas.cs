@@ -45,7 +45,7 @@ namespace BLL
         {
             bool retorno = false;
             ConexionDb conexion = new ConexionDb();
-            conexion.Ejecutar(String.Format("Insert into RegistroPelicula(Titulo, Descripcion, Ano, Calificacion, IMDB, CategoriaId) Values ('{0}','{1}',{2},{3},{4},{5})", this.Titulo, this.Descripcion, this.Ano, this.Calificacion, this.IMDB, this.CategoriaId));
+            retorno=conexion.Ejecutar(String.Format("Insert into RegistroPelicula(Titulo, Descripcion, Ano, Calificacion, IMDB, CategoriaId) Values ('{0}','{1}',{2},{3},{4},{5})", this.Titulo, this.Descripcion, this.Ano, this.Calificacion, this.IMDB, this.CategoriaId));
             return retorno;
         }
 
