@@ -125,6 +125,7 @@
             this.Controls.Add(this.botonNuevo);
             this.Name = "GenerosForm";
             this.Text = "Generos";
+            this.Load += new System.EventHandler(this.GenerosForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
