@@ -33,6 +33,7 @@
             this.botonSalir = new System.Windows.Forms.Button();
             this.botonAgregar = new System.Windows.Forms.Button();
             this.Titulolabel = new System.Windows.Forms.Label();
+            this.ListarButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonBuscar
@@ -72,11 +73,21 @@
             // 
             this.Titulolabel.AutoSize = true;
             this.Titulolabel.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titulolabel.Location = new System.Drawing.Point(305, 12);
+            this.Titulolabel.Location = new System.Drawing.Point(96, 9);
             this.Titulolabel.Name = "Titulolabel";
             this.Titulolabel.Size = new System.Drawing.Size(150, 28);
             this.Titulolabel.TabIndex = 4;
             this.Titulolabel.Text = "Movies Organizer";
+            // 
+            // ListarButton
+            // 
+            this.ListarButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ListarButton.BackgroundImage")));
+            this.ListarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ListarButton.Location = new System.Drawing.Point(377, 12);
+            this.ListarButton.Name = "ListarButton";
+            this.ListarButton.Size = new System.Drawing.Size(78, 56);
+            this.ListarButton.TabIndex = 5;
+            this.ListarButton.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 
@@ -84,7 +95,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(467, 319);
+            this.ClientSize = new System.Drawing.Size(468, 332);
+            this.Controls.Add(this.ListarButton);
             this.Controls.Add(this.Titulolabel);
             this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.botonBuscar);
@@ -102,6 +114,7 @@
         private System.Windows.Forms.Button botonSalir;
         private System.Windows.Forms.Button botonAgregar;
         private System.Windows.Forms.Label Titulolabel;
+        private System.Windows.Forms.Button ListarButton;
     }
 }
 
