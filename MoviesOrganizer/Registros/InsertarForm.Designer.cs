@@ -70,6 +70,7 @@
             this.DoubleBuffered = true;
             this.Name = "InsertarForm";
             this.Text = "Insertar";
+            this.Load += new System.EventHandler(this.InsertarForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

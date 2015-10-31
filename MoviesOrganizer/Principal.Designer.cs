@@ -88,6 +88,7 @@
             this.ListarButton.Size = new System.Drawing.Size(78, 56);
             this.ListarButton.TabIndex = 5;
             this.ListarButton.UseVisualStyleBackColor = true;
+            this.ListarButton.Click += new System.EventHandler(this.ListarButton_Click);
             // 
             // Principal
             // 

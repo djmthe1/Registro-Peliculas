@@ -42,5 +42,11 @@ namespace MoviesOrganizer
             Registros.InsertarForm insertar = new Registros.InsertarForm();
             insertar.Show();
         }
+
+        private void ListarButton_Click(object sender, EventArgs e)
+        {
+            Registros.ListarForm listar = new Registros.ListarForm();
+            listar.Show();
+        }
     }
 }
