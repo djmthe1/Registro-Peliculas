@@ -19,6 +19,12 @@ namespace BLL
             this.Descripcion = "";
         }
 
+        public Generos(int generoId, string descripcion)
+        {
+            this.GeneroId = generoId;
+            this.Descripcion = descripcion;
+        }
+
         public override bool Insertar()
         {
             bool retorno = false;
@@ -34,17 +40,29 @@ namespace BLL
             ConexionDb conexion = new ConexionDb();
             retorno=conexion.Ejecutar(String.Format("Update Into Categorias (Descripcion) Values('{0}')", this.Descripcion));
             return retorno;
-
         }
 
         public override bool Eliminar()
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+            ConexionDb conexion = new ConexionDb();
+            retorno = conexion.Ejecutar(String.Format("Delete From Generos where GeneroId={0}", this.GeneroId));
+            return retorno;
         }
 
         public override bool Buscar(int IdBuscado)
         {
-            throw new NotImplementedException();
+            ConexionDb conexion = new ConexionDb();
+            DataTable dt = new DataTable();
+
+            dt = conexion.ObtenerDatos("Select * from Generos Where GeneroId=" + IdBuscado);
+            if (dt.Rows.Count > 0)
+            {
+                this.GeneroId = (int)dt.Rows[0]["GeneroId"];
+                this.Descripcion = dt.Rows[0]["Descripcion"].ToString();
+            }
+
+            return dt.Rows.Count > 0;
         }
 
         public override DataTable Listado(string Campos, string Condicion, string Orden)

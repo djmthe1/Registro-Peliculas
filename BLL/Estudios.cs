@@ -13,11 +13,17 @@ namespace BLL
             public int EstudiosId { get; set; }
             public string Nombre { get; set; }
 
-            public Estudios()
-            {
-                this.EstudiosId = 0;
-                this.Nombre = "";
-            }
+        public Estudios()
+        {
+            this.EstudiosId = 0;
+            this.Nombre = "";
+        }
+
+        public Estudios(int estudiosId, string nombre)
+        {
+            this.EstudiosId = estudiosId;
+            this.Nombre = nombre;
+        }
 
         public override bool Insertar()
         {
@@ -29,12 +35,18 @@ namespace BLL
 
         public override bool Editar()
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+            ConexionDb conexion = new ConexionDb();
+            retorno = conexion.Ejecutar(String.Format("Update Into Estudios (Nombre) Values('{0}')", this.Nombre));
+            return retorno;
         }
 
         public override bool Eliminar()
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+            ConexionDb conexion = new ConexionDb();
+            retorno = conexion.Ejecutar(String.Format("Delete From Estudios where Values('{0}')", this.Nombre));
+            return retorno;
         }
 
         public override bool Buscar(int IdBuscado)

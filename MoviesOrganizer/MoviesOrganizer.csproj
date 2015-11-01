@@ -141,6 +141,9 @@
     <EmbeddedResource Include="Registros\CategoriasForm.resx">
       <DependentUpon>CategoriasForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\EstudiosForm.resx">
+      <DependentUpon>EstudiosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\GenerosForm.resx">
       <DependentUpon>GenerosForm.cs</DependentUpon>
     </EmbeddedResource>

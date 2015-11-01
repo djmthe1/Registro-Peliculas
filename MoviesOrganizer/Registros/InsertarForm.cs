@@ -21,27 +21,27 @@ namespace MoviesOrganizer.Registros
             if (SeleccionarComboBox.Text == "Genero")
             {
                 GenerosForm GF = new GenerosForm();
-                GF.Show();
+               
             }
             if (SeleccionarComboBox.Text == "Actor")
             {
                 ActoresForm AF = new ActoresForm();
-                AF.Show();
+                
             }
             if (SeleccionarComboBox.Text == "Estudio")
             {
                 EstudiosForm EF = new EstudiosForm();
-                EF.Show();
+                
             }
             if (SeleccionarComboBox.Text == "Categoría")
             {
                 CategoriasForm CF = new CategoriasForm();
-                CF.Show();
+                
             }
             if (SeleccionarComboBox.Text == "Pelicula")
             {
                 PeliculasForm PF = new PeliculasForm();
-                PF.Show();
+               
             }
 
         }
@@ -49,6 +49,11 @@ namespace MoviesOrganizer.Registros
         private void InsertarForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void botonVolver_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

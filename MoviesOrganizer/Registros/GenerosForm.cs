@@ -9,21 +9,26 @@ using System.Windows.Forms;
 
 namespace MoviesOrganizer.Registros
 {
-    public partial class BuscarForm : Form
+    public partial class GenerosForm : Form
     {
-        public BuscarForm()
+        public GenerosForm()
         {
             InitializeComponent();
         }
 
-        private void BuscarForm_Load(object sender, EventArgs e)
+        private void botonNuevo_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void botonVolver_Click(object sender, EventArgs e)
+        private void IDlabel_Click(object sender, EventArgs e)
         {
-            Close();
+
+        }
+
+        private void GenerosForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

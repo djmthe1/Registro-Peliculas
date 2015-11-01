@@ -15,5 +15,45 @@ namespace MoviesOrganizer.Registros
         {
             InitializeComponent();
         }
+
+        private void ListarForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botonVolver_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void ListarComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ListarComboBox.Text == "Genero")
+            {
+                GenerosForm GF = new GenerosForm();
+                GF.Show();
+            }
+            if (ListarComboBox.Text == "Actor")
+            {
+                ActoresForm AF = new ActoresForm();
+                AF.Show();
+            }
+            if (ListarComboBox.Text == "Estudio")
+            {
+                EstudiosForm EF = new EstudiosForm();
+                EF.Show();
+            }
+            if (ListarComboBox.Text == "Categoría")
+            {
+                CategoriasForm CF = new CategoriasForm();
+                CF.Show();
+            }
+            if (ListarComboBox.Text == "Pelicula")
+            {
+                PeliculasForm PF = new PeliculasForm();
+                PF.Show();
+            }
+
+        }
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertarForm));
             this.SeleccionarComboBox = new System.Windows.Forms.ComboBox();
             this.SeleccionarLabel = new System.Windows.Forms.Label();
+            this.botonVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SeleccionarComboBox
@@ -58,6 +59,17 @@
             this.SeleccionarLabel.TabIndex = 1;
             this.SeleccionarLabel.Text = "Seleccione lo Que Desea Insertar ";
             // 
+            // botonVolver
+            // 
+            this.botonVolver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonVolver.BackgroundImage")));
+            this.botonVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonVolver.Location = new System.Drawing.Point(326, 208);
+            this.botonVolver.Name = "botonVolver";
+            this.botonVolver.Size = new System.Drawing.Size(78, 56);
+            this.botonVolver.TabIndex = 4;
+            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
+            // 
             // InsertarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -65,6 +77,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(416, 276);
+            this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.SeleccionarLabel);
             this.Controls.Add(this.SeleccionarComboBox);
             this.DoubleBuffered = true;
@@ -80,5 +93,6 @@
 
         private System.Windows.Forms.ComboBox SeleccionarComboBox;
         private System.Windows.Forms.Label SeleccionarLabel;
+        private System.Windows.Forms.Button botonVolver;
     }
 }

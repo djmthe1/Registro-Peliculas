@@ -18,9 +18,9 @@ namespace BLL
             this.Nombre = "";
         }
 
-        public Actores(int autorId, string nombre)
+        public Actores(int actoresId, string nombre)
         {
-            this.ActoresId = autorId;
+            this.ActoresId = actoresId;
             this.Nombre = nombre;
         }
 
@@ -34,7 +34,6 @@ namespace BLL
 
         public override bool Editar()
         {
-            throw new NotImplementedException();
             bool retorno = false;
             ConexionDb conexion = new ConexionDb();
             retorno=conexion.Ejecutar(String.Format("Update Into Actores (Nombre) Values('{0}')", this.Nombre));
@@ -43,7 +42,10 @@ namespace BLL
 
         public override bool Eliminar()
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+            ConexionDb conexion = new ConexionDb();
+            retorno = conexion.Ejecutar(String.Format("Delete From Actores where ActorId={0}", this.ActoresId));
+            return retorno;
         }
 
         public override bool Buscar(int IdBuscado)
@@ -51,7 +53,7 @@ namespace BLL
             ConexionDb conexion = new ConexionDb();
             DataTable dt = new DataTable();
 
-            dt = conexion.ObtenerDatos("Select * from Actores Where EstudiosId=" + IdBuscado);
+            dt = conexion.ObtenerDatos("Select * from Actores Where ActoresId=" + IdBuscado);
             if (dt.Rows.Count > 0)
             {
                 this.ActoresId = (int)dt.Rows[0]["ActoresId"];

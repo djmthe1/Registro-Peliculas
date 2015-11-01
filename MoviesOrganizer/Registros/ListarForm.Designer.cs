@@ -32,6 +32,7 @@
             this.ListarLabel = new System.Windows.Forms.Label();
             this.ListarComboBox = new System.Windows.Forms.ComboBox();
             this.ListarDataGridView = new System.Windows.Forms.DataGridView();
+            this.botonVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListarDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,14 +59,26 @@
             this.ListarComboBox.Name = "ListarComboBox";
             this.ListarComboBox.Size = new System.Drawing.Size(121, 21);
             this.ListarComboBox.TabIndex = 4;
+            this.ListarComboBox.SelectedIndexChanged += new System.EventHandler(this.ListarComboBox_SelectedIndexChanged);
             // 
             // ListarDataGridView
             // 
             this.ListarDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListarDataGridView.Location = new System.Drawing.Point(139, 92);
+            this.ListarDataGridView.Location = new System.Drawing.Point(12, 92);
             this.ListarDataGridView.Name = "ListarDataGridView";
             this.ListarDataGridView.Size = new System.Drawing.Size(294, 173);
             this.ListarDataGridView.TabIndex = 6;
+            // 
+            // botonVolver
+            // 
+            this.botonVolver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonVolver.BackgroundImage")));
+            this.botonVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonVolver.Location = new System.Drawing.Point(355, 209);
+            this.botonVolver.Name = "botonVolver";
+            this.botonVolver.Size = new System.Drawing.Size(78, 56);
+            this.botonVolver.TabIndex = 7;
+            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
             // 
             // ListarForm
             // 
@@ -74,12 +87,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(445, 277);
+            this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.ListarDataGridView);
             this.Controls.Add(this.ListarComboBox);
             this.Controls.Add(this.ListarLabel);
             this.DoubleBuffered = true;
             this.Name = "ListarForm";
             this.Text = "ListarForm";
+            this.Load += new System.EventHandler(this.ListarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ListarDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -91,5 +106,6 @@
         private System.Windows.Forms.Label ListarLabel;
         private System.Windows.Forms.ComboBox ListarComboBox;
         private System.Windows.Forms.DataGridView ListarDataGridView;
+        private System.Windows.Forms.Button botonVolver;
     }
 }

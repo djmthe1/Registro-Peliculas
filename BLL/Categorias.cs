@@ -34,12 +34,18 @@ namespace BLL
 
         public override bool Editar()
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+            ConexionDb conexion = new ConexionDb();
+            conexion.Ejecutar(String.Format("Update Into Categorias (Descripcion) Values('{0}')", this.Descripcion));
+            return retorno;
         }
 
         public override bool Eliminar()
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+            ConexionDb conexion = new ConexionDb();
+            retorno = conexion.Ejecutar(String.Format("Delete From Categorias where CategoriaId={0}", this.CategoriaId));
+            return retorno;
         }
 
         public override bool Buscar(int IdBuscado)

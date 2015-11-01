@@ -33,6 +33,8 @@
             this.BuscarComboBox = new System.Windows.Forms.ComboBox();
             this.BuscarTextBox = new System.Windows.Forms.TextBox();
             this.BuscarDataGridView = new System.Windows.Forms.DataGridView();
+            this.botonVolver = new System.Windows.Forms.Button();
+            this.botonBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             // 
             // BuscarTextBox
             // 
-            this.BuscarTextBox.Location = new System.Drawing.Point(156, 27);
+            this.BuscarTextBox.Location = new System.Drawing.Point(174, 28);
             this.BuscarTextBox.Name = "BuscarTextBox";
             this.BuscarTextBox.Size = new System.Drawing.Size(150, 20);
             this.BuscarTextBox.TabIndex = 4;
@@ -75,6 +77,27 @@
             this.BuscarDataGridView.Size = new System.Drawing.Size(294, 173);
             this.BuscarDataGridView.TabIndex = 5;
             // 
+            // botonVolver
+            // 
+            this.botonVolver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonVolver.BackgroundImage")));
+            this.botonVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonVolver.Location = new System.Drawing.Point(354, 212);
+            this.botonVolver.Name = "botonVolver";
+            this.botonVolver.Size = new System.Drawing.Size(78, 56);
+            this.botonVolver.TabIndex = 6;
+            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
+            // 
+            // botonBuscar
+            // 
+            this.botonBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botonBuscar.BackgroundImage")));
+            this.botonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonBuscar.Location = new System.Drawing.Point(354, 12);
+            this.botonBuscar.Name = "botonBuscar";
+            this.botonBuscar.Size = new System.Drawing.Size(78, 56);
+            this.botonBuscar.TabIndex = 7;
+            this.botonBuscar.UseVisualStyleBackColor = true;
+            // 
             // BuscarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -82,6 +105,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(444, 280);
+            this.Controls.Add(this.botonBuscar);
+            this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.BuscarDataGridView);
             this.Controls.Add(this.BuscarTextBox);
             this.Controls.Add(this.BuscarComboBox);
@@ -102,5 +127,7 @@
         private System.Windows.Forms.ComboBox BuscarComboBox;
         private System.Windows.Forms.TextBox BuscarTextBox;
         private System.Windows.Forms.DataGridView BuscarDataGridView;
+        private System.Windows.Forms.Button botonVolver;
+        private System.Windows.Forms.Button botonBuscar;
     }
 }
